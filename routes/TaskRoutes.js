@@ -13,5 +13,11 @@ router.get("/get", getTasks); //on écrit getTasks ici pour l'utiliser et qu'ell
 
 router.post("/save", saveTask)
 
+router.put("/update/:id", updateTask)
+
+router.delete("/delete/:id", deleteTask)
+
+//Pour update et delete on rajoute un params (endpoint) pour identifier les properties de l'objet à modifier ou supprimer
+
 
 module.exports= router //To export router from here and be able to use it anywhere

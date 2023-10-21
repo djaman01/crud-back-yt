@@ -3,7 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const routes = require("./routes/TaskRoutes")//A l'interieur il y a nos différentes routes qui sont liés aux taskControllers.js pour écrire les function en raccourcie
+//A l'interieur il y a nos différentes routes handlers qui sont liés aux taskControllers.js
+const routes = require("./routes/TaskRoutes")
 
 const cors= require("cors");
 
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log('MongoDB Connected...'))
 .catch((err)=>console.log(err)); //If there is an error it will log err
 
+//on appelle la variable route qui importe toutes les routes handlers du file TaskRoutes
 app.use("/api",routes);//SO NOW THE URL WILL BE /api/get
 
 //ecrire à la fin du script
