@@ -11,13 +11,13 @@ router.get("/get", getTasks); //on écrit getTasks ici pour l'utiliser et qu'ell
 //We will do a GET request qu'on pourra lire ici: http://localhost:5000/api/get car on a ajouté /api dans server.js
 //getTasks function is created in TaskControllers.js 
 
-router.post("/save", saveTask)
+router.post("/save", saveTask);
 
-router.put("/update/:id", updateTask)
+router.put("/update/:id", updateTask);
 
-router.delete("/delete/:id", deleteTask)
+router.delete("/delete/:id", deleteTask);
 
 //Pour update et delete on rajoute un params (endpoint) pour identifier les properties de l'objet à modifier ou supprimer
 
 
-module.exports= router //To export router from here and be able to use it anywhere
+module.exports= router; //To export router from here and be able to use it anywhere
