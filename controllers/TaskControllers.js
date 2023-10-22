@@ -19,7 +19,7 @@ module.exports.saveTask = (req, res) => {
   const { task } = req.body //On crée des property task qu'on a définit dans le model
 
   //creating a new task
-  Taskmodel.create({ task })
+  TaskModel.create({ task })
     .then((data) => {
       console.log("Saved Successfully...")
       res.status(201).send(data)//Veut dire que quelque chose a bien été crée et.send(data) = send ce qui a été crée
