@@ -1,3 +1,5 @@
+//ECRIRE npm run dev POUR SE CONNECTER A MONGODB car c'est ce que le gars de la video a fait un code dans ce ses
+
 const express = require("express");
 
 const mongoose = require("mongoose");
